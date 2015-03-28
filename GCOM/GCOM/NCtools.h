@@ -1,5 +1,6 @@
+#ifndef NCTOOLS_H
+#define NCTOOLS_H
 
-#define TOOL_H_
 #define PI 3.1415926
 
 class NCtools
@@ -19,3 +20,5 @@ public:
 				       		   int frame,
 						       const char* filename);
 };
+
+#endif

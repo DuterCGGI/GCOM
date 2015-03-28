@@ -31,13 +31,4 @@
 #pragma comment(lib, CV_LIB("ts"))
 #pragma comment(lib, CV_LIB("video"))
 
-
-void BrokenAreaDetectionNew(const cv::Mat& img_edge, const cv::Vec4f& lines, 
-    std::vector<cv::Point>& broken_position, 
-    std::vector<cv::Point>& dual_position, 
-    std::vector<cv::Point>& crack_position, 
-    const int& win_size);
-
-void PreProcessing(const cv::Mat& img, cv::Mat& edge);
-
 #endif // LAMP_LIBCFG_H
