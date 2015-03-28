@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="BrokenDetection">
+      <UniqueIdentifier>{f64d4f5c-6285-45ca-817f-7ed9db4663af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NCtools">
+      <UniqueIdentifier>{ee97c1be-0d30-4a75-bdbc-a2becf543e4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{f9c26798-2582-4f54-a5e5-a269556088ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TEST">
+      <UniqueIdentifier>{ec76f511-b533-435b-9e6c-1c4d1ace4889}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConfigCV.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="TEST.h">
+      <Filter>TEST</Filter>
+    </ClInclude>
+    <ClInclude Include="ImgProc.h">
+      <Filter>BrokenDetection</Filter>
+    </ClInclude>
+    <ClInclude Include="NCtools.h">
+      <Filter>NCtools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Detection.cpp">
+      <Filter>BrokenDetection</Filter>
+    </ClCompile>
+    <ClCompile Include="Preprocessing.cpp">
+      <Filter>BrokenDetection</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="NCtools.cpp">
+      <Filter>NCtools</Filter>
+    </ClCompile>
+    <ClCompile Include="testNCtools.cpp">
+      <Filter>TEST</Filter>
+    </ClCompile>
+    <ClCompile Include="testBrokenDetection.cpp">
+      <Filter>TEST</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
