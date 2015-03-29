@@ -40,8 +40,8 @@ void ImgProc::BrokenAreaDetectionNew(const cv::Mat& img_edge, const cv::Vec4f& l
     double slope_threshold = 50.0; // if any slope is larger than this threshold , regard its slope  as infinity.
 
     //track_path is the path for searching-windows
-    size_t rows = img_edge.rows;
-    size_t cols = img_edge.cols;
+    int rows = img_edge.rows;
+    int cols = img_edge.cols;
     std::vector<cv::Point> track_path;
 
     cv::Point start, end;
@@ -75,7 +75,8 @@ void ImgProc::BrokenAreaDetectionNew(const cv::Mat& img_edge, const cv::Vec4f& l
             break;
         if (start.y+lines[1]*it*win_size*sigh>rows)
             break;
-        track_path.push_back(cv::Point(start.x+lines[0]*it*win_size*sigh, start.y+lines[1]*it*win_size*sigh));
+        track_path.push_back(cv::Point(int(start.x+lines[0]*it*win_size*sigh), 
+			                           int(start.y+lines[1]*it*win_size*sigh) ));
         ++it;
     }
     //handle error when the track_path is empty
@@ -102,7 +103,8 @@ void ImgProc::BrokenAreaDetectionNew(const cv::Mat& img_edge, const cv::Vec4f& l
         {
             for (int j = iter->x - win_size / 2; j <= iter->x + win_size / 2; ++j) 
             {
-                if (i < 0 || j < 0 || i >= rows || j >= cols)
+                if (i < 0 || j < 0 ||
+					i >= rows || j >= cols)
                 {
                     continue;
                 }
